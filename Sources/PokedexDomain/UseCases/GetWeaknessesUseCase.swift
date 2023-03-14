@@ -11,14 +11,14 @@ public protocol GetWeaknessesUseCase {
 }
 
 public final class DefaultGetWeaknessesUseCase: GetWeaknessesUseCase {
-    private let pokemonRepository: PokemonRepository
+    private let typeRepository: TypeRepository
     
-    public init(pokemonRepository: PokemonRepository) {
-        self.pokemonRepository = pokemonRepository
+    public init(typeRepository: TypeRepository) {
+        self.typeRepository = typeRepository
     }
     
     public func execute(typeNames: [String]) async throws -> TypeRelation {
-        return try await pokemonRepository.getWeaknesses(typeNames: typeNames)
+        return try await typeRepository.getWeaknesses(typeNames: typeNames)
     }
 }
 

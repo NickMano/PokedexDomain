@@ -12,5 +12,4 @@ public protocol PokemonRepository {
     func fetchPokemonImage(_ imageUrl: String) async throws -> Data
     func fetchSpecies(_ identifier: Int) async throws -> PokemonSpecies
     func fetchEggGroup(_ name: String) async throws -> EggGroup
-    func getWeaknesses(typeNames: [String]) async throws -> TypeRelation
 }
