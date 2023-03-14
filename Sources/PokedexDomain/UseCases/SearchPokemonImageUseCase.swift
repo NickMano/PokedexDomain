@@ -7,12 +7,10 @@
 
 import Foundation
 
-@available(iOS 13.0.0, *)
 public protocol SearchPokemonImageUseCase {
     func execute(urlImage: String) async throws -> Data
 }
 
-@available(iOS 13.0.0, *)
 public final class DefaultSearchPokemonImageUseCase: SearchPokemonImageUseCase {
     private let pokemonRepository: PokemonRepository
     

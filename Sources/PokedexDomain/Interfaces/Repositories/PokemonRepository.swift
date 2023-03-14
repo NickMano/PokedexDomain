@@ -7,7 +7,6 @@
 
 import Foundation
 
-@available(iOS 13.0.0, *)
 public protocol PokemonRepository {
     func fetchPokemons() async throws -> [Pokemon]
     func fetchPokemonImage(_ imageUrl: String) async throws -> Data

@@ -6,12 +6,10 @@
 //
 
 
-@available(iOS 13.0.0, *)
 public protocol GetWeaknessesUseCase {
     func execute(typeNames: [String]) async throws -> TypeRelation
 }
 
-@available(iOS 13.0.0, *)
 public final class DefaultGetWeaknessesUseCase: GetWeaknessesUseCase {
     private let pokemonRepository: PokemonRepository
     
